@@ -42,5 +42,6 @@ int main(void)
             fwrite(&i, sizeof(int), 1, f);
         }
     }
+    fclose(f);
     return 0;
 }
