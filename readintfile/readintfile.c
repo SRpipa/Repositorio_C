@@ -17,7 +17,7 @@ int main(void)
     int n;
     while (fread(&n, sizeof(int), 1, f) == 1)
     {
-        printf("%d\n", n);
+        printf("%d ", n);
     }
     fclose(f);
     return 0;
