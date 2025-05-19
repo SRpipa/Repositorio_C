@@ -74,26 +74,3 @@ void rondaCabinas(peaje *p, Reloj r)
         servCabina(&((*p)[i]), r);
     }
 }
-
-//mostrarPeaje
-void mostrarPeaje(peaje p)
-{
-    float t;
-    int coches = 0, i;
-    for (i = 0; i < NCAB; i++)
-    {
-        printf("Cabina %d : \n", i+1);
-        mostrarCabina(p[i], &t);
-        coches = coches + p[i].servidos;
-    }
-    printf("\n Total peaje; \n");
-    if (coches == 0)
-    {
-        printf("El tiempo de espera medio %f \n", t/coches);
-    }
-    else
-    {
-        printf("El tiempo de espera medio en el peaje es %f \n", t/coches);
-        printf("Se han servido %d coches. \n", coches);
-    }
-}

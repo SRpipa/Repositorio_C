@@ -71,20 +71,3 @@ void servCabina(cabina *cab, Reloj r)
         }
     }
 }
-
-//mostrarCabina
-void mostrarCabina(cabina cab, float *t)
-{
-    if (cab.servidos != 0)
-    {
-        printf("El tiempo medio esperado es: %f\n",cab.totalEsperado/(float)cab.servidos);
-        printf("El maximo de coches fue: %d\n",cab.maxCoches);
-        printf("Coches servidos: %d\n",cab.servidos);
-        *t = *t + cab.totalEsperado;
-    }
-    else{
-        printf("El tiempo medio esperado es: %f\n",0.00000);
-        printf("El maximo de coches fue: %d\n",cab.maxCoches);
-        printf("Coches servidos: %d\n",cab.servidos);
-    }
-}

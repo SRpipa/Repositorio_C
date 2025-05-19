@@ -34,3 +34,43 @@ void marchaCoche(control *c, Reloj r)
 {
     rondaCabinas(&c->peaje, r);
 }
+
+//mostarCabina
+void mostrarCabina(cabina cab, float *t)
+{
+    if (cab.servidos != 0)
+    {
+        printf("El tiempo medio esperado es: %f\n",cab.totalEsperado/(float)cab.servidos);
+        printf("El maximo de coches fue: %d\n",cab.maxCoches);
+        printf("Coches servidos: %d\n",cab.servidos);
+        *t = *t + cab.totalEsperado;
+    }
+    else{
+        printf("El tiempo medio esperado es: %f\n",0.00000);
+        printf("El maximo de coches fue: %d\n",cab.maxCoches);
+        printf("Coches servidos: %d\n",cab.servidos);
+    }
+}
+
+//mostarResultados
+void mostrarResultados(peaje p)
+{
+    float t;
+    int coches = 0, i;
+    for (i = 0; i < NCAB; i++)
+    {
+        printf("Cabina %d : \n", i+1);
+        mostrarCabina(p[i], &t);
+        coches = coches + p[i].servidos;
+    }
+    printf("\n Total peaje; \n");
+    if (coches == 0)
+    {
+        printf("El tiempo de espera medio %f \n", t/coches);
+    }
+    else
+    {
+        printf("El tiempo de espera medio en el peaje es %f \n", t/coches);
+        printf("Se han servido %d coches. \n", coches);
+    }
+}

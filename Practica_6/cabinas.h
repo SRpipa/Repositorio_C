@@ -53,7 +53,5 @@ int cuantosCoches(cabina);
 */
 void servCabina(cabina *, Reloj);
 
-//mostrarCabina
-void mostrarCabina(cabina, float *);
 
 #endif

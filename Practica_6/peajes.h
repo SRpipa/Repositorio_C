@@ -57,7 +57,5 @@ int eligeCabina(peaje);
 */
 void rondaCabinas(peaje *, Reloj);
 
-//mostrarPeaje
-void mostrarPeaje(peaje);
 
 #endif

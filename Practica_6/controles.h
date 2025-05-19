@@ -45,4 +45,10 @@ void llegaCoche(control *, Reloj);
 */
 void marchaCoche(control *, Reloj);
 
+//mostarCabina
+void mostrarCabina(cabina, float *);
+
+//mostarResultados
+void mostrarResultados(peaje);
+
 #endif

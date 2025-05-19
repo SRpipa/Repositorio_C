@@ -10,7 +10,6 @@
 //headers de algunas funciones auxiliares
 void iniciarSimulacion(control *c);
 void siguienteIteracion(control *c, Reloj r);
-void mostrarResultados(control c); //PREGUNTAR A LUCAS EN QUE MODULO VA ESTO !!!
 
 int main(void)
 {
@@ -23,7 +22,7 @@ int main(void)
         tic(&r);
         siguienteIteracion(&c, r);
     }
-    mostrarResultados(c);
+    mostrarResultados(c.peaje);
     return 0;
 }
 
@@ -38,9 +37,4 @@ void siguienteIteracion(control *c, Reloj r)
 {
     llegaCoche(c, r);
     marchaCoche(c, r);
-}
-
-void mostrarResultados(control c)
-{
-    mostrarPeaje(c.peaje);
 }
